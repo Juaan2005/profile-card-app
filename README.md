@@ -17,14 +17,13 @@ Dibuat sebagai submission untuk **Misi 14 — Menyiapkan Aplikasi untuk Rilis**,
 
 | Home (kosong) | Form ProfileCard | Home (terisi) |
 |:---:|:---:|:---:|
-| ![Home ](assets/screenshots/home.jpeg) | ![Form](assets/screenshots/form.jpeg) | ![Login](assets/screenshots/login.jpeg) |
+| ![Home Empty](assets/screenshots/home.jpeg) | ![Form](assets/screenshots/form.jpeg) | ![Home Filled](assets/screenshots/login.jpeg) |
 
 ### Bukti Build & Instalasi APK
 
-<!-- TODO: tambahkan 4 gambar ini setelah eas build selesai dan APK ter-install di HP -->
 | Build FINISHED di EAS | Instalasi APK di HP | Icon di App Drawer | App Berjalan (tanpa Expo Go) |
 |:---:|:---:|:---:|:---:|
-| ![EAS Build](assets/screenshots/eas-build-finished.png) | ![Install](assets/screenshots/apk-install.png) | ![App Drawer](assets/screenshots/app-drawer-icon.png) | ![Standalone](assets/screenshots/app-standalone.png) |
+| ![EAS Build](assets/screenshots/easbuild.jpeg) | ![Install](assets/screenshots/install.jpeg) | ![App Drawer](assets/screenshots/appdrawer.jpeg) | ![Standalone](assets/screenshots/standalone.jpeg) |
 
 ---
 
