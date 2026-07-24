@@ -106,7 +106,7 @@ Scan QR Code yang muncul dengan aplikasi **Expo Go** di HP (pastikan versi Expo 
 
 ## 🌐 Expo Snack
 
-**[▶️ Coba versi interaktif di Expo Snack](LINK_EXPO_SNACK)**
+**[▶️ Coba versi interaktif di Expo Snack](https://snack.expo.dev/@juantambunan/profilcard)**
 
 ---
 
