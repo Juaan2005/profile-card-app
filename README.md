@@ -17,7 +17,7 @@ Dibuat sebagai submission untuk **Misi 14 — Menyiapkan Aplikasi untuk Rilis**,
 
 | Home (kosong) | Form ProfileCard | Home (terisi) |
 |:---:|:---:|:---:|
-| ![Home Empty](assets/screenshots/home-empty.png) | ![Form](assets/screenshots/form.png) | ![Home Filled](assets/screenshots/home-filled.png) |
+| ![Home Empty](assets/screenshots/home.jpeg) | ![Form](assets/screenshots/form.jpeg) | ![Home Filled](assets/screenshots/login.jpeg) |
 
 ### Bukti Build & Instalasi APK
 
