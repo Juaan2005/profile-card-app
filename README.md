@@ -92,7 +92,7 @@ Scan QR Code yang muncul dengan aplikasi **Expo Go** di HP (pastikan versi Expo 
 
 ## 📦 Download & Install APK
 
-**[⬇️ Download APK (via EAS Dashboard)](LINK_APK_DARI_EAS_DASHBOARD)**
+**[⬇️ Download APK (via EAS Dashboard)](https://expo.dev/accounts/juantambunan/projects/profile-card-app-juan/builds/0629336f-5a75-417a-87a4-c89765303b20))**
 
 > ⚠️ Link build EAS tersimpan selama 30 hari. Jika link kadaluarsa, build ulang dengan `eas build --platform android --profile preview`.
 
