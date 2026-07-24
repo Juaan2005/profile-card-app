@@ -1,41 +1,28 @@
-# 📇 ProfileCard
+# ProfileCard
 
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)
-![Expo](https://img.shields.io/badge/Expo_SDK_54-000020?style=flat&logo=expo&logoColor=white)
-![AsyncStorage](https://img.shields.io/badge/AsyncStorage-Local_Persistence-6366F1)
-![License](https://img.shields.io/badge/status-release--candidate-6366F1)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat&logo=expo&logoColor=white)
 
-> **ProfileCard** adalah aplikasi kartu profil digital. Pengguna mengambil foto langsung dari kamera HP dan menangkap koordinat lokasi saat ini via GPS — keduanya digabung jadi satu kartu profil yang tersimpan otomatis di perangkat, bahkan setelah aplikasi ditutup total.
-
-Dibuat sebagai submission untuk **Misi 14 — Menyiapkan Aplikasi untuk Rilis**, Mata Kuliah Pemrograman Mobile.
+> ProfileCard adalah aplikasi kartu profil sederhana. Pengguna mengambil foto lewat kamera HP dan menangkap koordinat lokasi saat ini via GPS, lalu keduanya ditampilkan sebagai kartu profil yang tersimpan secara lokal.
 
 ---
 
 ## 📸 Screenshots
 
-### Fitur Aplikasi (via Expo Go)
-
 | Home (kosong) | Form ProfileCard | Home (terisi) |
 |:---:|:---:|:---:|
-| ![Home Empty](assets/screenshots/home-empty.png) | ![Form](assets/screenshots/form.png) | ![Home Filled](assets/screenshots/home-filled.png) |
-
-### Bukti Build & Instalasi APK
-
-<!-- TODO: tambahkan 4 gambar ini setelah eas build selesai dan APK ter-install di HP -->
-| Build FINISHED di EAS | Instalasi APK di HP | Icon di App Drawer | App Berjalan (tanpa Expo Go) |
-|:---:|:---:|:---:|:---:|
-| ![EAS Build](assets/screenshots/eas-build-finished.png) | ![Install](assets/screenshots/apk-install.png) | ![App Drawer](assets/screenshots/app-drawer-icon.png) | ![Standalone](assets/screenshots/app-standalone.png) |
+| ![Home](assets/screenshots/home-empty.png) | ![Form](assets/screenshots/form.png) | ![Home Filled](assets/screenshots/home-filled.png) |
 
 ---
 
 ## ✨ Fitur Utama
 
-- 📷 **Ambil foto profil** langsung dari kamera (`expo-image-picker`), lengkap dengan penanganan izin ditolak
-- 📍 **Ambil koordinat GPS saat ini** (`expo-location`), lengkap dengan penanganan izin ditolak
-- ✅ **Validasi form** — nama minimal 3 karakter, foto wajib diambil sebelum kartu bisa disimpan
-- 💾 **Persistensi lokal** dengan AsyncStorage — kartu profil tetap ada setelah app ditutup dan dibuka ulang
-- 🧭 **2 screen** dengan Stack Navigation (Home ↔ Profil Saya)
-- 🔖 **App version display** — versi aplikasi (dari `app.json`) terbaca otomatis lewat `expo-constants`
+- [x] Ambil foto profil lewat kamera (expo-image-picker), termasuk handle izin ditolak
+- [x] Ambil koordinat lokasi saat ini via GPS (expo-location), termasuk handle izin ditolak
+- [x] Validasi form (nama minimal 3 karakter, foto wajib diambil sebelum simpan)
+- [x] Kartu profil tersimpan secara lokal (AsyncStorage), persist setelah app ditutup
+- [x] 2 screen dengan Stack Navigation (Home ↔ ProfileCard)
+- [x] Tampilan versi app di app.json terbaca via expo-constants
 
 ---
 
@@ -43,11 +30,10 @@ Dibuat sebagai submission untuk **Misi 14 — Menyiapkan Aplikasi untuk Rilis**,
 
 | Layer | Teknologi |
 |-------|-----------|
-| Framework | React Native 0.81 + Expo SDK 54 |
+| Framework | React Native + Expo (SDK 51) |
 | Navigation | React Navigation v6 (Native Stack) |
-| Storage | `@react-native-async-storage/async-storage` |
-| Device Feature | `expo-image-picker` (kamera) + `expo-location` (GPS) |
-| App Info | `expo-constants` |
+| Storage | @react-native-async-storage/async-storage |
+| Device | expo-image-picker (kamera), expo-location (GPS) |
 | Build | EAS Build (Expo Application Services) |
 
 ---
@@ -64,10 +50,7 @@ profile-card-app/
 ├── babel.config.js
 ├── src/
 │   ├── navigation/AppNavigator.js
-│   ├── screens/
-│   │   ├── HomeScreen.js
-│   │   └── ProfileCardScreen.js
-│   ├── services/storage.js
+│   ├── screens/ (HomeScreen, ProfileCardScreen)
 │   └── constants/colors.js
 └── assets/
     ├── icon.png
@@ -78,54 +61,33 @@ profile-card-app/
 
 ---
 
-## 🚀 Cara Menjalankan (Development)
+## 🚀 Cara Menjalankan
 
 ```bash
-git clone https://github.com/Juaan2005/profile-card-app.git
+git clone https://github.com/USERNAME/profile-card-app.git
 cd profile-card-app
 npm install
 npx expo start
 ```
 
-Scan QR Code yang muncul dengan aplikasi **Expo Go** di HP (pastikan versi Expo Go kamu mendukung SDK 54).
+Scan QR Code dengan Expo Go di HP.
 
 ---
 
-## 📦 Download & Install APK
+## 📦 Download APK
 
-**[⬇️ Download APK (via EAS Dashboard)](LINK_APK_DARI_EAS_DASHBOARD)**
-
-> ⚠️ Link build EAS tersimpan selama 30 hari. Jika link kadaluarsa, build ulang dengan `eas build --platform android --profile preview`.
-
-**Cara install:**
-1. Download file `.apk` di atas langsung dari HP Android
-2. Buka file yang sudah terdownload
-3. Izinkan instalasi dari sumber tidak dikenal jika diminta
-4. Tap **Install**, tunggu selesai, lalu buka aplikasinya
+[Download APK terbaru](LINK_APK_GITHUB_RELEASE_ATAU_EAS_DASHBOARD)
 
 ---
 
 ## 🌐 Expo Snack
 
-**[▶️ Coba versi interaktif di Expo Snack](LINK_EXPO_SNACK)**
-
----
-
-## 🔧 Build dari Sumber (EAS)
-
-```bash
-eas login
-eas init
-eas build --platform android --profile preview
-```
-
-Konfigurasi build ada di `eas.json`, dengan profile `preview` menghasilkan `.apk` (internal distribution) dan profile `production` menghasilkan `.aab` untuk rilis Play Store.
+[Buka di Expo Snack](LINK_EXPO_SNACK)
 
 ---
 
 ## 👤 Developer
 
-**Juan Tambunan**
+**Nama Lengkap** | NIM | Kelas
 Universitas Prima Indonesia — Prodi Sistem Informasi
 Mata Kuliah: Pemrograman Mobile (TI-MOBILE-01)
-GitHub: [@Juaan2005](https://github.com/Juaan2005)
